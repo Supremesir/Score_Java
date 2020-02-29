@@ -62,8 +62,8 @@
 
         <Button
             android:id="@+id/add11"
-            android:layout_width="@dimen/addButtonWidth"
-            android:layout_height="@dimen/addButtonHeight"
+            android:layout_width="@dimen/addButtonWidthLand"
+            android:layout_height="@dimen/addButtonHeightLand"
             android:background="#03A9F4"
             android:onClick="@{() -> data.addaTeamScore(1)}"
             android:text="@string/add1"
@@ -74,8 +74,8 @@
 
         <Button
             android:id="@+id/add12"
-            android:layout_width="@dimen/addButtonWidth"
-            android:layout_height="@dimen/addButtonHeight"
+            android:layout_width="@dimen/addButtonWidthLand"
+            android:layout_height="@dimen/addButtonHeightLand"
             android:background="#03A9F4"
             android:text="@string/add2"
             android:onClick="@{() -> data.addaTeamScore(2)}"
@@ -86,8 +86,8 @@
 
         <Button
             android:id="@+id/add13"
-            android:layout_width="@dimen/addButtonWidth"
-            android:layout_height="@dimen/addButtonHeight"
+            android:layout_width="@dimen/addButtonWidthLand"
+            android:layout_height="@dimen/addButtonHeightLand"
             android:background="#03A9F4"
             android:text="@string/add3"
             android:onClick="@{() -> data.addaTeamScore(3)}"
@@ -98,8 +98,8 @@
 
         <Button
             android:id="@+id/add21"
-            android:layout_width="@dimen/addButtonWidth"
-            android:layout_height="@dimen/addButtonHeight"
+            android:layout_width="@dimen/addButtonWidthLand"
+            android:layout_height="@dimen/addButtonHeightLand"
             android:background="#E91E63"
             android:text="@string/add1"
             android:onClick="@{() -> data.addbTeamScore(1)}"
@@ -110,8 +110,8 @@
 
         <Button
             android:id="@+id/add22"
-            android:layout_width="@dimen/addButtonWidth"
-            android:layout_height="@dimen/addButtonHeight"
+            android:layout_width="@dimen/addButtonWidthLand"
+            android:layout_height="@dimen/addButtonHeightLand"
             android:background="#E91E63"
             android:text="@string/add2"
             android:onClick="@{() -> data.addbTeamScore(2)}"
@@ -122,8 +122,8 @@
 
         <Button
             android:id="@+id/add23"
-            android:layout_width="@dimen/addButtonWidth"
-            android:layout_height="@dimen/addButtonHeight"
+            android:layout_width="@dimen/addButtonWidthLand"
+            android:layout_height="@dimen/addButtonHeightLand"
             android:background="#E91E63"
             android:text="@string/add3"
             android:onClick="@{() -> data.addbTeamScore(3)}"
@@ -137,7 +137,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.12" />
+            app:layout_constraintGuide_percent="0.07" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline2"
@@ -151,28 +151,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.38" />
+            app:layout_constraintGuide_percent="0.45" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.55" />
+            app:layout_constraintGuide_percent="0.6" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.73" />
+            app:layout_constraintGuide_percent="0.76" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.88" />
+            app:layout_constraintGuide_percent="0.91" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline7"

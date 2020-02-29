@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="addButtonWidth">150sp</dimen>
+    <dimen name="addButtonHeight">60sp</dimen>
+    <dimen name="addButtonWidthLand">180sp</dimen>
+    <dimen name="addButtonHeightLand">40sp</dimen>
+</resources>
