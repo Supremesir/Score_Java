@@ -13,10 +13,11 @@ import com.supremesir.score_java.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final static String KEY_SHP  = "MY_DATA";
+    public final static String KEY_SHP  = "MY_DATA";
 
     ScoreViewModel scoreViewModel;
     ActivityMainBinding binding;
+    MyData myData;
 
 
     @Override
@@ -29,15 +30,23 @@ public class MainActivity extends AppCompatActivity {
         binding.setData(scoreViewModel);
         binding.setLifecycleOwner(this);
 
+        // 不要传入this，会导致内存泄漏
+        // ApplicationContext，可以理解为指向app的顶级引用
+        // 若app存在，他则存在，且只有一个 -> Singleton
+        myData = new MyData(getApplicationContext());
+        myData.number = 400;
+        myData.save();
+        int number = myData.load();
+        Log.d(KEY_SHP, "number load is : " + number);
 
-//        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
-        SharedPreferences sharedPreferences = getSharedPreferences("MY_DATA", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt(KEY_SHP, 1000);
-        // 使用异步的apply而不是commit，保证并发操作数据安全
-//        editor.commit();
-        editor.apply();
-        int temp = sharedPreferences.getInt(KEY_SHP, 0);
-        Log.d(KEY_SHP, "SharedPreferences Value is : " + temp);
+////        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
+//        SharedPreferences sharedPreferences = getSharedPreferences("MY_DATA", MODE_PRIVATE);
+//        SharedPreferences.Editor editor = sharedPreferences.edit();
+//        editor.putInt(KEY_SHP, 2000);
+//        // 使用异步的apply而不是commit，保证并发操作数据安全
+////        editor.commit();
+//        editor.apply();
+//        int temp = sharedPreferences.getInt(KEY_SHP, 0);
+//        Log.d(KEY_SHP, "SharedPreferences Value is : " + temp);
     }
 }
