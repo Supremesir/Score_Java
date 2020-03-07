@@ -13,8 +13,6 @@ import com.supremesir.score_java.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    public final static String KEY_SHP  = "MY_DATA";
-
     ScoreViewModel scoreViewModel;
     ActivityMainBinding binding;
     MyData myData;
@@ -34,10 +32,10 @@ public class MainActivity extends AppCompatActivity {
         // ApplicationContext，可以理解为指向app的顶级引用
         // 若app存在，他则存在，且只有一个 -> Singleton
         myData = new MyData(getApplicationContext());
-        myData.number = 400;
+        myData.number = 300;
         myData.save();
         int number = myData.load();
-        Log.d(KEY_SHP, "number load is : " + number);
+        Log.d(getResources().getString(R.string.KEY_SHP), "number load is : " + number);
 
 ////        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
 //        SharedPreferences sharedPreferences = getSharedPreferences("MY_DATA", MODE_PRIVATE);

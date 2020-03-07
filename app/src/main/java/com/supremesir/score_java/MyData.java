@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
 
-import static com.supremesir.score_java.MainActivity.KEY_SHP;
 
 /**
  * @author HaoFan Fang
@@ -25,15 +24,15 @@ public class MyData {
     public void save() {
         SharedPreferences sharedPreferences = context.getSharedPreferences("MY_DATA", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt(KEY_SHP, number);
+        editor.putInt(context.getResources().getString(R.string.KEY_SHP), number);
         editor.apply();
     }
 
     public int load() {
         SharedPreferences sharedPreferences = context.getSharedPreferences("MY_DATA", Context.MODE_PRIVATE);
-        int temp = sharedPreferences.getInt(KEY_SHP, 0);
+        int temp = sharedPreferences.getInt(context.getResources().getString(R.string.KEY_SHP), context.getResources().getInteger(R.integer.defValue));
         number = temp;
-        Log.d(KEY_SHP, "My Data SharedPreferences Value is : " + temp);
+        Log.d(context.getResources().getString(R.string.KEY_SHP), "My Data SharedPreferences Value is : " + temp);
         return temp;
     }
 

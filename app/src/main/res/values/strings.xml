@@ -8,4 +8,5 @@
     <string name="add3" translatable="false">+3</string>
     <string name="refresh" translatable="false">refresh_image_button</string>
     <string name="undo" translatable="false">undo_image_button</string>
+    <string name="KEY_SHP" translatable="false">MY_DATA</string>
 </resources>
